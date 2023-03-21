@@ -1,0 +1,166 @@
+:root {
+	font-size: 16px; 
+	/*This sets the font-size all over the document. Default: 16px;
+	You can set all other value relative to this value. I mean, this is the easiest way to 
+	changing a whole complex object with changing one value. See bottom the @media block.*/
+}
+
+body, html { 
+    margin: 0;
+    padding: 0;
+    /* Must both parameters set when vertical scrollbar appears with min-height: 100vh. */
+}
+
+body {
+	background-image: linear-gradient(to bottom, hsl(273, 76%, 66%), hsl(241, 73%, 65%));
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	align-items: center; 
+  	justify-content: center; 
+  	height: 100vh;
+}
+
+#div-card-left, #div-card-right {
+	background-color: 	hsl(0, 0%, 100%);
+}
+
+#div-card-left {
+	width: 26rem;
+	height: 31.875rem;
+	border-radius: 1.3125rem 0 0 1.3125rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	background-image: url(./images/illustration-woman-online-desktop.svg), url(./images/bg-pattern-desktop.svg);
+	background-position: left top, left top;
+	background-size: 115%, 230%;
+	background-position-x: -5.5rem, -35.5rem;
+	background-position-y: 4rem, -18rem;
+	background-repeat: no-repeat;
+}
+
+#div-card-right {
+	width: 31.5rem;
+	height: 31.875rem;
+	border-radius: 0 1.3125rem 1.3125rem 0;
+	font-size: 0.75rem;
+	font-weight: 400;
+}
+
+#img-woman {
+	width: 100%;
+	margin-left: -5rem;
+}
+
+#img-box {
+	position: absolute;
+	left: -5.5rem;
+	top: 13rem;
+	width: 44%;
+	height: auto;
+}
+
+#img-woman-mobile {
+	visibility: hidden;
+}
+
+h1 {
+	color: hsl(238, 29%, 16%);
+	margin-left: 3.625rem;
+	margin-top: 4rem;
+	margin-bottom: 1.4rem;
+	font-size: 2rem;
+}
+
+.div-class-wrap {
+	margin: 0 6rem 0.35rem 3.65rem;
+	border-bottom: 1px solid hsl(240, 5%, 91%);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	}
+
+.div-class-question {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.p-class-question {
+	font-size: 0.85rem;
+	color: hsl(237, 12%, 33%);
+	font-weight: 400;
+}
+
+.p-class-question:hover {
+	color: hsl(14, 88%, 65%);
+	cursor: pointer;
+}
+
+.p-class-answer {
+	color: hsl(240, 6%, 50%);
+	display: none;  This must set for start toggler as hidden. 
+}
+
+.img-class-arrow {
+	margin-right: 1rem;
+	rotate: 0;
+}
+
+@media (max-width: 1060px) {
+
+	main {
+		flex-direction: column;
+	}
+
+	#div-card-left {
+		width: 20.375rem;
+		height: 9rem;
+		border-radius: 1.3125rem 1.3125rem 0 0;
+	}
+
+	#div-card-right {
+		width: 20.375rem;
+		height: 26.875rem;
+		border-radius: 0 0 1.3125rem 1.3125rem;
+	}
+
+	h1 {
+		margin: 1.5rem 0;
+		text-align: center;
+	}
+
+	.div-class-wrap {
+	margin: 0 1.65rem 0.35rem 1.65rem;
+	}
+
+	.img-class-arrow {
+		margin-right: 0;
+	}
+
+	#img-woman-mobile {
+	visibility: visible;
+	width: 80%;
+	margin: auto;
+	margin-top: -7rem;
+	}
+
+	#img-box {
+		visibility: hidden;
+	}
+
+	#div-card-left {
+		background-image: url(./images/bg-pattern-mobile.svg);
+		background-size: 80%;
+		background-position: center top;
+		margin-top: 9rem;
+	}
+
+}
